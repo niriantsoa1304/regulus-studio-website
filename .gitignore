@@ -1,1 +1,4 @@
 dist/**
+.wrangler/
+.idea/
+.vscode/
