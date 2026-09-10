@@ -232,51 +232,6 @@
     updateControls();
   })();
 
-  /* On desktop, one vertical wheel gesture advances exactly one section. */
-  (function () {
-    var DESKTOP_MIN_WIDTH = 900;
-    var sections = Array.prototype.slice.call(document.querySelectorAll(".hero, .section, .site-footer"));
-    if (!sections.length) return;
-
-    var cooling = false;
-
-    function isDesktop() {
-      return window.innerWidth >= DESKTOP_MIN_WIDTH;
-    }
-
-    function closestIndex() {
-      var best = 0;
-      var bestDistance = Infinity;
-      sections.forEach(function (section, index) {
-        var distance = Math.abs(section.getBoundingClientRect().top);
-        if (distance < bestDistance) {
-          bestDistance = distance;
-          best = index;
-        }
-      });
-      return best;
-    }
-
-    function goToSection(index) {
-      index = Math.max(0, Math.min(sections.length - 1, index));
-      sections[index].scrollIntoView({
-        behavior: reduceMotion ? "auto" : "smooth",
-        block: "start"
-      });
-      cooling = true;
-      window.setTimeout(function () {
-        cooling = false;
-      }, reduceMotion ? 150 : 650);
-    }
-
-    window.addEventListener("wheel", function (event) {
-      if (!isDesktop() || Math.abs(event.deltaY) < 4) return;
-      event.preventDefault();
-      if (cooling) return;
-      goToSection(closestIndex() + (event.deltaY > 0 ? 1 : -1));
-    }, { passive: false });
-  })();
-
   /* Footer copyright year */
   var footerYear = document.getElementById("footer-year");
   if (footerYear) footerYear.textContent = new Date().getFullYear();
@@ -286,6 +241,20 @@
     var form = document.getElementById(formId);
     var status = document.getElementById(statusId);
     if (!form) return;
+
+    var emailField = form.querySelector('input[type="email"]');
+    if (emailField && status) {
+      emailField.addEventListener("invalid", function () {
+        status.textContent = "Merci de saisir une adresse email valide afin que nous puissions vous répondre.";
+        status.className = "form-status error";
+      });
+      emailField.addEventListener("input", function () {
+        if (emailField.validity.valid && status.className === "form-status error") {
+          status.textContent = "";
+          status.className = "form-status";
+        }
+      });
+    }
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -320,13 +289,21 @@
               status.textContent = successMessage;
               status.className = "form-status success";
             }
-          } else {
-            throw new Error("Erreur d'envoi");
+            return;
           }
+          return response.json().catch(function () { return null; }).then(function (data) {
+            var errors = (data && data.errors) || [];
+            var isEmailError = errors.some(function (err) {
+              return err.field === "email" || (err.message && err.message.toLowerCase().indexOf("email") !== -1);
+            });
+            throw new Error(isEmailError ? "invalid-email" : "send-failed");
+          });
         })
-        .catch(function () {
+        .catch(function (err) {
           if (status) {
-            status.textContent = "L'envoi a échoué. Réessayez ou écrivez-nous directement sur WhatsApp.";
+            status.textContent = err && err.message === "invalid-email"
+              ? "Merci de saisir une adresse email valide afin que nous puissions vous répondre."
+              : "Une erreur est survenue lors de l'envoi. Veuillez réessayer, ou nous contacter directement via WhatsApp.";
             status.className = "form-status error";
           }
         })

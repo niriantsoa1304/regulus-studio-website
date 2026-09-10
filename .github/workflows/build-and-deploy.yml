@@ -1,0 +1,51 @@
+name: Build and Deploy
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "**.md"
+      - "**.pdf"
+
+  pull_request:
+    branches: ["main"]
+    paths-ignore:
+      - "**.md"
+      - "**.pdf"
+jobs:
+  build:
+    name: Build App
+    if: github.repository == 'niriantsoa1304/regulus-studio-website'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create dist directory
+        run: mkdir dist
+      - name: Copy index.html to dist directory
+        run: cp index.html -t dist/
+      - name: Copy assets, css and js to dist directory
+        run: cp -r assets/ css/ js/ -t dist/
+      - name: Copy manifest.json, sitemap.xml and robots.txt to dist directory
+        run: cp manifest.json sitemap.xml robots.txt -t dist/
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+
+  deploy:
+    name: Deploy App to Cloudflare Pages
+    needs: build
+    if: github.event_name == 'push' && github.repository == 'niriantsoa1304/regulus-studio-website'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download build artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: dist
+          path: dist/
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler pages deploy dist --project-name=regulus-studio
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

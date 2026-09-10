@@ -9,7 +9,7 @@
   "theme_color": "#b1466f",
   "icons": [
     {
-      "src": "assets/Icône%20seule.svg",
+      "src": "https://regulus-studio.tech/assets/Icône%20seule.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }

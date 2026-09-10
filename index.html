@@ -1,394 +1,468 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regulus Studio — Outils numériques sur mesure pour petites entreprises</title>
-<meta name="description" content="Regulus Studio conçoit des applications de gestion et des sites web sur mesure pour les petites et moyennes entreprises : caisse, stock, personnel, réservations, sites vitrines et portfolios.">
-<meta property="og:title" content="Regulus Studio — Outils numériques sur mesure">
-<meta property="og:description" content="Des applications de gestion et des sites web simples, fiables et pensés pour vous correspondre.">
-<meta property="og:image" content="assets/Wordmark.svg">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#fff6f8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1b1116" media="(prefers-color-scheme: dark)">
-<link rel="manifest" href="manifest.json">
-<link rel="icon" type="image/svg+xml" href="assets/Icône%20seule.svg">
-<link rel="preload" as="image" href="assets/hero-regulus-studio.svg" fetchpriority="high">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Baloo+2:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}</style></noscript>
-<script>
-  try {
-    var savedTheme = localStorage.getItem("rs-theme");
-    if (savedTheme === "light" || savedTheme === "dark") {
-      document.documentElement.setAttribute("data-theme", savedTheme);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="your-google-site-verification-code">
+  <title>Regulus Studio — Outils numériques sur mesure pour petites entreprises</title>
+  <meta name="description" content="Regulus Studio conçoit des applications de gestion et des sites web sur mesure pour les petites et moyennes entreprises : caisse, stock, personnel, réservations, sites vitrines et portfolios.">
+  <meta name="keywords" content="gestion, sites web, applications, regulus studio, sites vitrines, portfolios, Studio de développement, outils numériques sur mesure, projets entreprise"/>
+  <meta name="author" content="Niriantsoa"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:url" content="https://regulus-studio.tech"/>
+  <meta property="og:title" content="Regulus Studio — Outils numériques sur mesure">
+  <meta property="og:description" content="Des applications de gestion et des sites web simples, fiables et pensés pour vous correspondre.">
+  <meta property="og:image" content="https://regulus-studio.tech/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Regulus Studio — Outils numériques sur mesure pour petites entreprises">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Regulus Studio"/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Regulus Studio — Outils numériques sur mesure">
+  <meta name="twitter:description" content="Des applications de gestion et des sites web simples, fiables et pensés pour vous correspondre.">
+  <meta name="twitter:image" content="https://regulus-studio.tech/assets/og-image.png">
+  <meta name="theme-color" content="#fff6f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1116" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://regulus-studio.tech"/>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/Icône%20seule.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}</style></noscript>
+  <script>
+    try {
+      var savedTheme = localStorage.getItem("rs-theme");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Regulus Studio",
+      "url": "https://regulus-studio.tech",
+      "description": "Regulus Studio conçoit des applications de gestion et des sites web sur mesure pour les petites et moyennes entreprises.",
+      "image": "https://regulus-studio.tech/assets/og-image.png",
+      "email": "contact@regulus-studio.tech",
+      "telephone": "+261374967622",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61593911283016"
+      ]
     }
-  } catch (e) {}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Regulus Studio",
-  "description": "Regulus Studio conçoit des applications de gestion et des sites web sur mesure pour les petites et moyennes entreprises.",
-  "image": "assets/Wordmark.svg",
-  "email": "contact@regulus-studio.tech",
-  "telephone": "+261374967622",
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=61593911283016"
-  ]
-}
-</script>
+  </script>
 </head>
 <body>
 
-<a class="skip-link" href="#main">Aller au contenu</a>
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-
-<header class="site-header" id="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="brand">
-      <img src="assets/Icône%20seule.svg" alt="" class="brand-icon" width="192" height="192">
-      <img src="assets/Wordmark.svg" alt="Regulus Studio" class="brand-wordmark" width="244" height="125">
-    </a>
-
-    <div class="nav-group">
-      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
-        <a href="#services" data-nav-link>Services</a>
-        <a href="#a-propos" data-nav-link>À propos</a>
-        <a href="#avis" data-nav-link>Avis</a>
-        <a href="#contact" data-nav-link>Contact</a>
-        <a href="#contact" class="btn btn-primary btn-small nav-cta">Discutons de votre projet</a>
-      </nav>
-
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activer le thème sombre" aria-pressed="false">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        </button>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-          <span></span><span></span><span></span>
-        </button>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <main id="main">
+    <section class="hero">
+      <img
+        class="hero-image"
+        src="assets/regulus-hero.jpg"
+        alt="Studio numérique Regulus avec écrans de conception web dans un intérieur architectural"
+        width={1920}
+        height={1152}
+        fetchPriority="high"
+      />
+      <div class="hero-grade" aria-hiddden="true"></div>
+      <div class="hero-vignette" aria-hiddden="true"></div>
+      <div class="hero-perspective" aria-hidden="true">
+        <div class="hero-perspective-frame hero-perspective-frame-outer"></div>
+        <div class="hero-perspective-frame hero-perspective-frame-inner"></div>
+        <div class="hero-perspective-axis"></div>
       </div>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Des solutions numériques <em>pensées pour votre entreprise.</em></h1>
-        <p class="hero-lead">Regulus Studio accompagne les PME dans leur transformation numérique avec des <strong>sites web professionnels</strong> et des <strong>applications de gestion sur mesure</strong>, adaptés à leurs besoins.</p>
-
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Discuter de mon projet</a>
-          <a href="#services" class="btn btn-outline">Découvrir nos services</a>
-        </div>
-
-        <p class="hero-signature"><em>Regulus Studio — Beyond what’s possible.</em></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-head centered reveal">
-        <p class="eyebrow">Ce que nous proposons</p>
-        <h2>Des services pensés pour les PME</h2>
-        <p class="section-lead">Deux expertises pour concrétiser votre projet numérique.</p>
-      </div>
-
-      <div class="grid grid-2 reveal-stagger">
-        <div class="card service-card">
-          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <h3>Applications de gestion sur mesure</h3>
-          <p class="desktop-text">Point de vente, stocks, personnel, facturation, tableaux de bord : un outil unique adapté à votre activité.</p>
-          <p class="mobile-text">Point de vente, stocks, personnel, facturation, tableaux de bord.</p>
-          <a href="#besoins" class="btn btn-outline service-link">En savoir plus <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="card service-card">
-          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z" stroke="currentColor" stroke-width="1.6"/></svg></span>
-          <h3>Sites vitrines &amp; portfolios</h3>
-          <p class="desktop-text">Des sites clairs, rapides et adaptés aux mobiles, pour présenter votre activité, vos services ou vos réalisations.</p>
-          <p class="mobile-text">Des sites clairs et rapides pour présenter votre activité et vos réalisations.</p>
-          <a href="#besoins" class="btn btn-outline service-link">En savoir plus <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CHOIX DU PROJET -->
-  <section class="section section-alt" id="besoins">
-    <div class="container">
-      <div class="section-head centered reveal">
-        <p class="eyebrow">Votre projet</p>
-        <h2>De quoi avez-vous besoin ?</h2>
-        <p class="section-lead">Parlez-nous de votre projet. Sélectionnez ce qui correspond le mieux à votre besoin pour commencer.</p>
-      </div>
-
-      <div class="grid grid-4 reveal-stagger">
-        <article class="card need-card">
-          <h3>Mon portfolio</h3>
-          <p>Un site personnel pour présenter votre parcours, vos compétences, vos projets ou vos réalisations.</p>
-          <a href="#contact" class="need-link">Démarrer mon projet <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card need-card">
-          <h3>Un site vitrine</h3>
-          <p>Un site professionnel pour présenter votre entreprise, vos services et permettre à vos clients de vous trouver facilement.</p>
-          <a href="#contact" class="need-link">Créer mon site <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card need-card">
-          <h3>Une application de gestion</h3>
-          <p>Un outil adapté à votre entreprise pour gérer plus simplement vos clients, produits, stocks, ventes ou autres activités.</p>
-          <a href="#contact" class="need-link">Discuter de mon application <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card need-card">
-          <h3>Autre</h3>
-          <p>Vous avez un besoin différent ou une idée particulière ? Parlez-nous de votre projet et nous verrons ensemble comment le concrétiser.</p>
-          <a href="#contact" class="need-link">Parler de mon projet <span aria-hidden="true">→</span></a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- À PROPOS -->
-  <section class="section" id="a-propos">
-    <div class="container">
-      <div class="section-head centered reveal">
-        <p class="eyebrow">Pourquoi Regulus Studio</p>
-        <h2>Un studio à taille humaine, une exécution rapide</h2>
-      </div>
-
-      <div class="grid grid-4 features reveal-stagger">
-        <div class="feature">
-          <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
-          <h3>Rapide</h3>
-          <p>Une réalisation rapide, sans sacrifier la qualité.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
-          <h3>Sécurisé</h3>
-          <p class="desktop-text">Les zones sensibles sont toujours validées par un expert.</p>
-          <p class="mobile-text">Validé par un expert.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14 3 7 7-9.5 9.5-7 1 1-7L14 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m13 5 6 6" stroke="currentColor" stroke-width="1.8"/></svg></span>
-          <h3>Sur mesure</h3>
-          <p class="desktop-text">Chaque projet part de votre réalité, pas d'un modèle générique.</p>
-          <p class="mobile-text">Pas un modèle générique.</p>
-        </div>
-        <div class="feature">
-          <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M2 20c.8-3.6 3.4-5.5 7-5.5s6.2 1.9 7 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 4.5c1.7.4 3 1.9 3 3.7s-1.3 3.3-3 3.7M22 20c-.6-2.7-2-4.4-4.5-5.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-          <h3>Accompagné</h3>
-          <p class="desktop-text">Un contact humain avant, pendant et après le projet.</p>
-          <p class="mobile-text">Avant, pendant, après.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AVIS -->
-  <section class="section review-section" id="avis">
-    <div class="container review-grid">
-      <div class="review-text reveal">
-        <p class="eyebrow">Votre expérience</p>
-        <h2>Votre avis nous aide à progresser</h2>
-        <p>Vous avez travaillé avec Regulus Studio ? Partagez votre expérience en quelques mots. Chaque retour est lu avec attention.</p>
-
-        <div class="review-note">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 14.2 9 20.6 9.2 15.5 13.1 17.3 19.3 12 15.7 6.7 19.3 8.5 13.1 3.4 9.2 9.8 9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          <p>Votre avis ne sera jamais publié sans votre autorisation.</p>
-        </div>
-      </div>
-
-      <form class="contact-form review-form reveal" id="review-form" method="POST" action="https://formspree.io/f/xjyvkqwp">
-        <input type="hidden" name="form_type" value="Avis client">
-        <input type="hidden" name="_subject" value="Nouvel avis client — Regulus Studio">
-
-        <fieldset class="rating-field">
-          <legend>Votre note</legend>
-          <div class="star-rating" aria-label="Note sur 5">
-            <input type="radio" id="rating-5" name="rating" value="5" required><label for="rating-5" title="5 étoiles"><span class="sr-only">5 étoiles</span>★</label>
-            <input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4" title="4 étoiles"><span class="sr-only">4 étoiles</span>★</label>
-            <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3" title="3 étoiles"><span class="sr-only">3 étoiles</span>★</label>
-            <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2" title="2 étoiles"><span class="sr-only">2 étoiles</span>★</label>
-            <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-1" title="1 étoile"><span class="sr-only">1 étoile</span>★</label>
-          </div>
-        </fieldset>
-
-        <div class="review-fields">
-          <div class="field">
-            <label for="review-name">Votre nom</label>
-            <input type="text" id="review-name" name="name" placeholder="Ex. Ravaka R." autocomplete="name" maxlength="80" required>
-          </div>
-          <div class="field">
-            <label for="review-company">Entreprise</label>
-            <input type="text" id="review-company" name="company" placeholder="Facultatif" autocomplete="organization" maxlength="100">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="review-service">Service réalisé</label>
-          <input type="text" id="review-service" name="service" placeholder="Ex. Site vitrine, application de gestion" maxlength="120" required>
-        </div>
-        <div class="field">
-          <label for="review-email">Votre email <span class="label-note">— non publié</span></label>
-          <input type="email" id="review-email" name="_replyto" placeholder="vous@entreprise.com" autocomplete="email" maxlength="160" required>
-        </div>
-        <div class="field">
-          <label for="review-message">Votre avis</label>
-          <textarea id="review-message" name="message" rows="4" placeholder="Qu'avez-vous apprécié dans notre collaboration ?" maxlength="1200" required></textarea>
-        </div>
-
-        <label class="consent-field">
-          <input type="checkbox" name="publication_authorized" value="Oui">
-          <span>J'autorise Regulus Studio à publier cet avis avec mon prénom et mon entreprise.</span>
-        </label>
-
-        <div class="hp-field" aria-hidden="true">
-          <label for="review-website">Ne pas remplir</label>
-          <input type="text" id="review-website" name="_gotcha" tabindex="-1" autocomplete="off">
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-full">Envoyer mon avis</button>
-        <p class="form-status" id="review-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
-    <div class="container contact-grid">
-
-      <div class="contact-text reveal">
-        <p class="eyebrow">Contact</p>
-        <h2>Un projet en tête ?</h2>
-        <p>Parlons de votre activité et de ce qui vous ferait gagner du temps au quotidien.</p>
-
-        <ul class="contact-links">
-          <li>
-            <a href="mailto:contact@regulus-studio.tech">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Écrire par email
+      <header class="hero-header">
+        <a
+          class="hero-brand"
+          href="#top"
+        >
+          <span class="hero-app-name">Regulus</span>
+          <span class="hero-logo">R°</span>
+        </a>
+        <nav class="hero-nav" aria-label="Navigation principale">
+          <a class="hero-nav-link" href="#services">
+            Services
+          </a>
+          <a class="hero-nav-link" href="#a-propos">
+            A propos
+          </a>
+          <a class="hero-nav-link" href="#projects">
+            Projets
+          </a>
+          <a class="hero-nav-cta" href="#contact">
+            Parlons-en
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-nav-cta-icon">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </a>
+        </nav>
+        <details class="hero-nav-mobile">
+          <summary class="nav-mobile-trigger" aria-label="Ouvrir le menu">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-trigger-icon">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </summary>
+          <nav class="nav-mobile" aria-label="Navigation principale">
+            <a class="nav-mobile-link" href="#services">
+              Services
             </a>
-          </li>
-          <li>
-            <a href="https://wa.me/261374967622" target="_blank" rel="noopener">
+            <a class="nav-mobile-link" href="#a-propos">
+              A propos
+            </a>
+            <a class="nav-mobile-link" href="#projects">
+              Projets
+            </a>
+            <a class="nav-mobile-link" href="#contact">
+              Parlons-en
+            </a>
+          </nav>
+        </details>
+      </header>
+      <div
+        id="top"
+        class="hero-content"
+      >
+        <div class="hero-center-stage">
+          <div class="hero-quote">
+            <span class="hero-quote-wrapper" aria-hidden="true"></span>
+            Construire n'est que le début
+            <span class="hero-quote-wrapper" aria-hidden="true"></span>
+          </div>
+          <div class="hero-title-container">
+            <span class="hero-depth-word" aria-hidden="true">
+              Regulus
+            </span>
+            <h1 class="hero-title">
+              Regulus
+              <span class="hero-title-low">Studio</span>
+            </h1>
+            <span class="hero-title-plane"></span>
+          </div>
+          <p class="hero-description">
+            Regulus Studio vous accompagne dans votre transformation numérique avec des solutions professionnelles, conçues autour de vos besoins et pensées pour évoluer avec votre activité.
+          </p>
+          <a
+            class="hero-cta"
+            href="#contact"
+          >
+            Démarrer mon site
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-cta-icon">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <p class="eyebrow">Ce que nous proposons</p>
+          <h2>Des services pensés pour les PME</h2>
+          <p class="section-lead">Deux expertises pour concrétiser votre projet numérique.</p>
+        </div>
+
+        <div class="grid grid-2 reveal-stagger">
+          <div class="card service-card">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            <h3>Applications de gestion sur mesure</h3>
+            <p class="desktop-text">Point de vente, stocks, personnel, facturation, tableaux de bord : un outil unique adapté à votre activité.</p>
+            <p class="mobile-text">Point de vente, stocks, personnel, facturation, tableaux de bord.</p>
+            <a href="#besoins" class="btn btn-outline service-link">En savoir plus <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="card service-card">
+            <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            <h3>Sites vitrines &amp; portfolios</h3>
+            <p class="desktop-text">Des sites clairs, rapides et adaptés aux mobiles, pour présenter votre activité, vos services ou vos réalisations.</p>
+            <p class="mobile-text">Des sites clairs et rapides pour présenter votre activité et vos réalisations.</p>
+            <a href="#besoins" class="btn btn-outline service-link">En savoir plus <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHOIX DU PROJET -->
+    <section class="section section-alt" id="besoins">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <p class="eyebrow">Votre projet</p>
+          <h2>De quoi avez-vous besoin ?</h2>
+          <p class="section-lead">Parlez-nous de votre projet. Sélectionnez ce qui correspond le mieux à votre besoin pour commencer.</p>
+        </div>
+
+        <div class="grid grid-4 reveal-stagger">
+          <article class="card need-card">
+            <h3>Mon portfolio</h3>
+            <p>Un site personnel pour présenter votre parcours, vos compétences, vos projets ou vos réalisations.</p>
+            <a href="#contact" class="need-link">Démarrer mon projet <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card need-card">
+            <h3>Un site vitrine</h3>
+            <p>Un site professionnel pour présenter votre entreprise, vos services et permettre à vos clients de vous trouver facilement.</p>
+            <a href="#contact" class="need-link">Créer mon site <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card need-card">
+            <h3>Une application de gestion</h3>
+            <p>Un outil adapté à votre entreprise pour gérer plus simplement vos clients, produits, stocks, ventes ou autres activités.</p>
+            <a href="#contact" class="need-link">Discuter de mon application <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card need-card">
+            <h3>Autre</h3>
+            <p>Vous avez un besoin différent ou une idée particulière ? Parlez-nous de votre projet et nous verrons ensemble comment le concrétiser.</p>
+            <a href="#contact" class="need-link">Parler de mon projet <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="section" id="a-propos">
+      <div class="container">
+        <div class="section-head centered reveal">
+          <p class="eyebrow">Pourquoi Regulus Studio</p>
+          <h2>Un studio à taille humaine, une exécution rapide</h2>
+        </div>
+
+        <div class="grid grid-4 features reveal-stagger">
+          <div class="feature">
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <h3>Rapide</h3>
+            <p>Une réalisation rapide, sans sacrifier la qualité.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <h3>Sécurisé</h3>
+            <p class="desktop-text">Les zones sensibles sont toujours validées par un expert.</p>
+            <p class="mobile-text">Validé par un expert.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14 3 7 7-9.5 9.5-7 1 1-7L14 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m13 5 6 6" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            <h3>Sur mesure</h3>
+            <p class="desktop-text">Chaque projet part de votre réalité, pas d'un modèle générique.</p>
+            <p class="mobile-text">Pas un modèle générique.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M2 20c.8-3.6 3.4-5.5 7-5.5s6.2 1.9 7 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 4.5c1.7.4 3 1.9 3 3.7s-1.3 3.3-3 3.7M22 20c-.6-2.7-2-4.4-4.5-5.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <h3>Accompagné</h3>
+            <p class="desktop-text">Un contact humain avant, pendant et après le projet.</p>
+            <p class="mobile-text">Avant, pendant, après.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVIS -->
+    <section class="section review-section" id="avis">
+      <div class="container review-grid">
+        <div class="review-text reveal">
+          <p class="eyebrow">Votre expérience</p>
+          <h2>Votre avis nous aide à progresser</h2>
+          <p>Vous avez travaillé avec Regulus Studio ? Partagez votre expérience en quelques mots. Chaque retour est lu avec attention.</p>
+
+          <div class="review-note">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 14.2 9 20.6 9.2 15.5 13.1 17.3 19.3 12 15.7 6.7 19.3 8.5 13.1 3.4 9.2 9.8 9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <p>Votre avis ne sera jamais publié sans votre autorisation.</p>
+          </div>
+        </div>
+
+        <form class="contact-form review-form reveal" id="review-form" method="POST" action="https://formspree.io/f/xjyvkqwp">
+          <input type="hidden" name="form_type" value="Avis client">
+          <input type="hidden" name="_subject" value="Nouvel avis client — Regulus Studio">
+
+          <fieldset class="rating-field">
+            <legend>Votre note</legend>
+            <div class="star-rating" aria-label="Note sur 5">
+              <input type="radio" id="rating-5" name="rating" value="5" required><label for="rating-5" title="5 étoiles"><span class="sr-only">5 étoiles</span>★</label>
+              <input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4" title="4 étoiles"><span class="sr-only">4 étoiles</span>★</label>
+              <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3" title="3 étoiles"><span class="sr-only">3 étoiles</span>★</label>
+              <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2" title="2 étoiles"><span class="sr-only">2 étoiles</span>★</label>
+              <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-1" title="1 étoile"><span class="sr-only">1 étoile</span>★</label>
+            </div>
+          </fieldset>
+
+          <div class="review-fields">
+            <div class="field">
+              <label for="review-name">Votre nom</label>
+              <input type="text" id="review-name" name="name" placeholder="Ex. Ravaka R." autocomplete="name" maxlength="80" required>
+            </div>
+            <div class="field">
+              <label for="review-company">Entreprise</label>
+              <input type="text" id="review-company" name="company" placeholder="Facultatif" autocomplete="organization" maxlength="100">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="review-service">Service réalisé</label>
+            <input type="text" id="review-service" name="service" placeholder="Ex. Site vitrine, application de gestion" maxlength="120" required>
+          </div>
+          <div class="field">
+            <label for="review-email">Votre email <span class="label-note">— non publié</span></label>
+            <input type="email" id="review-email" name="_replyto" placeholder="vous@entreprise.com" autocomplete="email" maxlength="160" required>
+          </div>
+          <div class="field">
+            <label for="review-message">Votre avis</label>
+            <textarea id="review-message" name="message" rows="4" placeholder="Qu'avez-vous apprécié dans notre collaboration ?" maxlength="1200" required></textarea>
+          </div>
+
+          <label class="consent-field">
+            <input type="checkbox" name="publication_authorized" value="Oui">
+            <span>J'autorise Regulus Studio à publier cet avis avec mon prénom et mon entreprise.</span>
+          </label>
+
+          <div class="hp-field" aria-hidden="true">
+            <label for="review-website">Ne pas remplir</label>
+            <input type="text" id="review-website" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Envoyer mon avis</button>
+          <p class="form-status" id="review-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-text reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Un projet en tête ?</h2>
+          <p>Parlons de votre activité et de ce qui vous ferait gagner du temps au quotidien.</p>
+
+          <ul class="contact-links">
+            <li>
+              <a href="mailto:contact@regulus-studio.tech">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Écrire par email
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/261374967622" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.04 21.8h-.01a9.84 9.84 0 0 1-5.01-1.37l-.36-.21-3.73.98 1-3.64-.24-.37A9.83 9.83 0 0 1 2.18 12C2.18 6.58 6.6 2.17 12.04 2.17c2.63 0 5.1 1.02 6.96 2.88A9.77 9.77 0 0 1 21.88 12c0 5.42-4.42 9.83-9.84 9.83m8.39-18.23A11.79 11.79 0 0 0 12.05.1C5.52.1.21 5.41.21 11.94c0 2.09.55 4.13 1.6 5.93L.11 24l6.27-1.64a11.9 11.9 0 0 0 5.66 1.44h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.46-8.37"/></svg>
+                Discuter sur WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61593911283016" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07"/></svg>
+                Suivre la page Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" method="POST" action="https://formspree.io/f/xjyvkqwp">
+          <input type="hidden" name="form_type" value="Demande de contact">
+          <input type="hidden" name="_subject" value="Nouvelle demande — Regulus Studio">
+          <div class="field">
+            <label for="company">Nom de votre entreprise</label>
+            <input type="text" id="company" name="company" placeholder="Ex. Boulangerie Ravaka" autocomplete="organization" maxlength="100" required>
+          </div>
+          <div class="field">
+            <label for="reply-to">Votre email</label>
+            <input type="email" id="reply-to" name="_replyto" placeholder="vous@entreprise.com" autocomplete="email" maxlength="160" required>
+          </div>
+          <div class="field">
+            <label for="phone">Téléphone ou WhatsApp <span class="label-note">— facultatif</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="Ex. +261 34 00 000 00" autocomplete="tel" inputmode="tel" maxlength="30">
+          </div>
+          <div class="field">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Dites-nous ce qui vous ferait gagner du temps" maxlength="1500" required></textarea>
+          </div>
+
+          <!-- anti-spam honeypot, laissé vide par les humains -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Ne pas remplir</label>
+            <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="footer-logo">
+            <img src="assets/Icône%20seule.svg" alt="" class="footer-logo-icon" width="192" height="192" loading="lazy" decoding="async">
+            <img src="assets/Wordmark.svg" alt="Regulus Studio" class="footer-wordmark" width="244" height="125" loading="lazy" decoding="async">
+          </a>
+          <p class="footer-tagline">Des outils numériques sur mesure pour les petites et moyennes entreprises.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/261374967622" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.04 21.8h-.01a9.84 9.84 0 0 1-5.01-1.37l-.36-.21-3.73.98 1-3.64-.24-.37A9.83 9.83 0 0 1 2.18 12C2.18 6.58 6.6 2.17 12.04 2.17c2.63 0 5.1 1.02 6.96 2.88A9.77 9.77 0 0 1 21.88 12c0 5.42-4.42 9.83-9.84 9.83m8.39-18.23A11.79 11.79 0 0 0 12.05.1C5.52.1.21 5.41.21 11.94c0 2.09.55 4.13 1.6 5.93L.11 24l6.27-1.64a11.9 11.9 0 0 0 5.66 1.44h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.46-8.37"/></svg>
-              Discuter sur WhatsApp
             </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=61593911283016" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/profile.php?id=61593911283016" target="_blank" rel="noopener" aria-label="Suivre la page Facebook">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07"/></svg>
-              Suivre la page Facebook
             </a>
-          </li>
-        </ul>
-      </div>
-
-      <form class="contact-form reveal" id="contact-form" method="POST" action="https://formspree.io/f/xjyvkqwp">
-        <input type="hidden" name="form_type" value="Demande de contact">
-        <input type="hidden" name="_subject" value="Nouvelle demande — Regulus Studio">
-        <div class="field">
-          <label for="company">Nom de votre entreprise</label>
-          <input type="text" id="company" name="company" placeholder="Ex. Boulangerie Ravaka" autocomplete="organization" maxlength="100" required>
-        </div>
-        <div class="field">
-          <label for="reply-to">Votre email</label>
-          <input type="email" id="reply-to" name="_replyto" placeholder="vous@entreprise.com" autocomplete="email" maxlength="160" required>
-        </div>
-        <div class="field">
-          <label for="phone">Téléphone ou WhatsApp <span class="label-note">— facultatif</span></label>
-          <input type="tel" id="phone" name="phone" placeholder="Ex. +261 34 00 000 00" autocomplete="tel" inputmode="tel" maxlength="30">
-        </div>
-        <div class="field">
-          <label for="message">Votre message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Dites-nous ce qui vous ferait gagner du temps" maxlength="1500" required></textarea>
+            <a href="mailto:contact@regulus-studio.tech" aria-label="Écrire par email">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
         </div>
 
-        <!-- anti-spam honeypot, laissé vide par les humains -->
-        <div class="hp-field" aria-hidden="true">
-          <label for="website">Ne pas remplir</label>
-          <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
-        </div>
+        <nav class="footer-nav" aria-label="Navigation du pied de page">
+          <p class="footer-heading">Navigation</p>
+          <a href="#a-propos">À propos</a>
+          <a href="#services">Services</a>
+          <a href="#avis">Donner votre avis</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-        <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
-
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer" id="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#top" class="footer-logo">
-          <img src="assets/Icône%20seule.svg" alt="" class="footer-logo-icon" width="192" height="192" loading="lazy" decoding="async">
-          <img src="assets/Wordmark.svg" alt="Regulus Studio" class="footer-wordmark" width="244" height="125" loading="lazy" decoding="async">
-        </a>
-        <p class="footer-tagline">Des outils numériques sur mesure pour les petites et moyennes entreprises.</p>
-        <div class="footer-socials">
-          <a href="https://wa.me/261374967622" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.04 21.8h-.01a9.84 9.84 0 0 1-5.01-1.37l-.36-.21-3.73.98 1-3.64-.24-.37A9.83 9.83 0 0 1 2.18 12C2.18 6.58 6.6 2.17 12.04 2.17c2.63 0 5.1 1.02 6.96 2.88A9.77 9.77 0 0 1 21.88 12c0 5.42-4.42 9.83-9.84 9.83m8.39-18.23A11.79 11.79 0 0 0 12.05.1C5.52.1.21 5.41.21 11.94c0 2.09.55 4.13 1.6 5.93L.11 24l6.27-1.64a11.9 11.9 0 0 0 5.66 1.44h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.46-8.37"/></svg>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61593911283016" target="_blank" rel="noopener" aria-label="Suivre la page Facebook">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07"/></svg>
-          </a>
-          <a href="mailto:contact@regulus-studio.tech" aria-label="Écrire par email">
+        <div class="footer-contact">
+          <p class="footer-heading">Contact</p>
+          <a href="mailto:contact@regulus-studio.tech">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            contact@regulus-studio.tech
+          </a>
+          <a href="https://wa.me/261374967622" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.04 21.8h-.01a9.84 9.84 0 0 1-5.01-1.37l-.36-.21-3.73.98 1-3.64-.24-.37A9.83 9.83 0 0 1 2.18 12C2.18 6.58 6.6 2.17 12.04 2.17c2.63 0 5.1 1.02 6.96 2.88A9.77 9.77 0 0 1 21.88 12c0 5.42-4.42 9.83-9.84 9.83m8.39-18.23A11.79 11.79 0 0 0 12.05.1C5.52.1.21 5.41.21 11.94c0 2.09.55 4.13 1.6 5.93L.11 24l6.27-1.64a11.9 11.9 0 0 0 5.66 1.44h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.46-8.37"/></svg>
+            WhatsApp
           </a>
         </div>
       </div>
 
-      <nav class="footer-nav" aria-label="Navigation du pied de page">
-        <p class="footer-heading">Navigation</p>
-        <a href="#a-propos">À propos</a>
-        <a href="#services">Services</a>
-        <a href="#avis">Donner votre avis</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="footer-contact">
-        <p class="footer-heading">Contact</p>
-        <a href="mailto:contact@regulus-studio.tech">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          contact@regulus-studio.tech
-        </a>
-        <a href="https://wa.me/261374967622" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.04 21.8h-.01a9.84 9.84 0 0 1-5.01-1.37l-.36-.21-3.73.98 1-3.64-.24-.37A9.83 9.83 0 0 1 2.18 12C2.18 6.58 6.6 2.17 12.04 2.17c2.63 0 5.1 1.02 6.96 2.88A9.77 9.77 0 0 1 21.88 12c0 5.42-4.42 9.83-9.84 9.83m8.39-18.23A11.79 11.79 0 0 0 12.05.1C5.52.1.21 5.41.21 11.94c0 2.09.55 4.13 1.6 5.93L.11 24l6.27-1.64a11.9 11.9 0 0 0 5.66 1.44h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.46-8.37"/></svg>
-          WhatsApp
-        </a>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> Regulus Studio. Tous droits réservés.</p>
+        <p class="footer-credit">Conçu avec soin.</p>
       </div>
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <p>&copy; <span id="footer-year">2026</span> Regulus Studio. Tous droits réservés.</p>
-      <p class="footer-credit">Conçu avec soin.</p>
-    </div>
+  <div class="float-actions">
+    <a class="float-btn float-whatsapp" id="float-whatsapp" href="https://wa.me/261374967622" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.04 21.8h-.01a9.84 9.84 0 0 1-5.01-1.37l-.36-.21-3.73.98 1-3.64-.24-.37A9.83 9.83 0 0 1 2.18 12C2.18 6.58 6.6 2.17 12.04 2.17c2.63 0 5.1 1.02 6.96 2.88A9.77 9.77 0 0 1 21.88 12c0 5.42-4.42 9.83-9.84 9.83m8.39-18.23A11.79 11.79 0 0 0 12.05.1C5.52.1.21 5.41.21 11.94c0 2.09.55 4.13 1.6 5.93L.11 24l6.27-1.64a11.9 11.9 0 0 0 5.66 1.44h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.46-8.37"/></svg>
+    </a>
+    <button class="float-btn float-top" id="float-top" type="button" aria-label="Revenir en haut de la page">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </div>
-</footer>
 
-<div class="float-actions">
-  <a class="float-btn float-whatsapp" id="float-whatsapp" href="https://wa.me/261374967622" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.04 21.8h-.01a9.84 9.84 0 0 1-5.01-1.37l-.36-.21-3.73.98 1-3.64-.24-.37A9.83 9.83 0 0 1 2.18 12C2.18 6.58 6.6 2.17 12.04 2.17c2.63 0 5.1 1.02 6.96 2.88A9.77 9.77 0 0 1 21.88 12c0 5.42-4.42 9.83-9.84 9.83m8.39-18.23A11.79 11.79 0 0 0 12.05.1C5.52.1.21 5.41.21 11.94c0 2.09.55 4.13 1.6 5.93L.11 24l6.27-1.64a11.9 11.9 0 0 0 5.66 1.44h.01c6.52 0 11.83-5.31 11.83-11.84 0-3.16-1.23-6.13-3.46-8.37"/></svg>
-  </a>
-  <button class="float-btn float-top" id="float-top" type="button" aria-label="Revenir en haut de la page">
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-</div>
-
-<script src="js/script.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
